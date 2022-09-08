@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port =3000;
+const port ="your port number";
 const https = require('node:https');
 
 app.use(express.json());
@@ -15,7 +15,7 @@ app.post('/',(req,res)=>{
   const firstName = req.body.fName;
   const lastName = req.body.lName;
   const emailAddress = req.body.email;
-  const url = "https://us9.api.mailchimp.com/3.0/lists/cbbd1eda9f";
+  const url = "https://us9.api.mailchimp.com/3.0/lists/"audience_id";
   const data = {
     members: [
       {
@@ -63,7 +63,5 @@ app.listen(process.env.PORT ||port  ,()=>{
   console.log("Server started on Port "+ port);
 })
 
-// const apiKey = "c5abeb812a28c511db9d89e943202773-us9";
 
-// Audience ID
-// cbbd1eda9f
+
