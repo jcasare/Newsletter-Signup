@@ -31,7 +31,7 @@ app.post('/',(req,res)=>{
   const jsonData = JSON.stringify(data);
   const options = {
     method:"POST",
-    auth:"jay1:c5abeb812a28c511db9d89e943202773-us9"
+    auth:"username:apiKey"
   }
   const request = https.request(url,options,(response)=>{
     response.on('data',(data)=>{
